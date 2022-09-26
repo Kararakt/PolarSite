@@ -1,0 +1,543 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+
+.btn--Header{
+    color: white ;
+    font-weight: 600;
+    background-color: var(--custompink);
+    padding: 0.5rem 3rem;
+    border: 2px solid var(--custompink);
+    border-radius: 0.5rem;
+}
+.btn--Header:hover{
+    border: 2px solid var(--custompink);
+    color: var(--custompink);
+    background-color: white;
+}
+.card--HomePage .el-card{
+border-radius: 1rem;
+}
+.main-div-tabs--HomePage .el-tabs,
+.main-div-tabs--HomePage .el-tabs .el-tabs__header,
+.main-div-tabs--HomePage .el-tabs .el-tabs__item.is-top{
+border: none;
+}
+.main-div-tabs--HomePage .el-tabs .el-tabs__header{
+background-color: white;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+.main-div-tabs--HomePage .el-tabs .el-tabs__item.is-top.is-active{
+   color: var(--custompink);
+}
+.main-div-tabs--HomePage .el-tabs .el-tabs__header .el-tabs__item:not(.is-disabled):hover{
+    color: var(--custompink);
+}
+.main-div-tabs--HomePage .el-tabs .el-tabs__content{
+    padding-top: 1rem;
+}
+.form--HomePage .el-form-item .el-input__wrapper{
+    padding: 1rem 2rem;
+    box-shadow: 0 0 0 1px var(--custompink);
+}
+.form--HomePage .el-form-item .el-input__inner::placeholder{
+    color: var(--custompink);
+}
+.second-form--HomePage .el-form-item .el-textarea__inner{
+    padding: 1rem 2rem;
+    box-shadow: 0 0 0 1px var(--custompink);
+}
+.second-form--HomePage .el-form-item .el-textarea .el-input__count{
+    color: var(--custompink);
+    font-size: 0.9rem;
+}
+.second-form--HomePage .el-form-item .el-textarea__inner::placeholder{
+    color: var(--custompink);
+}
+.btn-form--HomePage .el-form-item__content .el-button{
+    background-color: var(--custompink);
+    color: white;
+    padding: 1rem 3.5rem;
+    border: 2px solid var(--custompink);
+    font-size: 1rem;
+}
+.btn-form--HomePage .el-form-item__content .el-button:hover,
+.btn-form--HomePage .el-form-item__content .el-button:focus,
+.btn-form--HomePage .el-form-item__content .el-button::after{
+    background-color: white;
+    color: var(--custompink);
+    border: 2px solid var(--custompink);
+}
+.form--HomePage > .el-form-item .el-form-item__error,
+.second-form--HomePage > .el-form-item .el-form-item__error{
+    font-size: 1rem;
+}
+ .form--Footer .el-form-item .el-input__wrapper{
+    box-shadow: 0 0 0 2px var(--custompink);
+    padding: 0.5rem;
+    background-color: transparent;
+} 
+.form--Footer .el-form-item .el-input__inner::placeholder,
+.form--Footer .el-form-item .el-input__inner{
+    color: white;
+}
+.form--Footer .el-form-item .el-form-item__error{
+    font-size: 1rem;
+}
+.form--Footer .el-input-group__append{
+    background-color: var(--custompink);
+    color: white;
+    font-size: 1rem;
+    box-shadow: 0 0 0 2px var(--custompink);
+}   
+.form--Footer  .el-input-group__append:hover,.el-form-item .el-button:hover{
+    color: var(--custompink) ;
+    background-color: white;
+    box-shadow: 0 0 0 2px var(--custompink);
+}
+.scroll-icon--HomePage {
+    position: fixed;
+    bottom: 6rem;
+    right: 5rem;
+    z-index: 100;
+    display: none;
+    cursor: pointer;
+  }
+.iconUp--HomePage{
+    color: white;
+    background-color: var(--custompink);
+    border-radius: 1rem;
+}
+
+
+
+@media (max-width:400px){
+    #header {
+        position: absolute;
+        top: 2.5rem;
+        right: 2rem;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 20;
+      }
+    
+        #header::before {
+          content: "";
+          position: absolute;
+          width: 1.563rem;
+          height: 0.2rem;
+          background: #fff;
+          transform: translateY(-0.625rem);
+          transition: transform 400ms cubic-bezier(0.23, 1, 0.32, 1);
+        }
+      
+        #header::after {
+          content: "";
+          position: absolute;
+          width: 1.563rem;
+          height: 0.2rem;
+          background: #fff;
+          box-shadow: 0 0.625rem 0 0;
+          color: #fff;
+          transition: 0.4s;
+        }
+    
+      .active#header::before {
+        transform: rotate(45deg);
+        transition: transform 400ms cubic-bezier(0.23, 1, 0.32, 1);
+      }
+    
+      .active#header::after {
+        transform: rotate(-45deg);
+        transition: transform 400ms cubic-bezier(0.23, 1, 0.32, 1);
+        box-shadow: none;
+      }
+    
+      #menu {
+        position: fixed;
+        top: 0;
+        left: 100%;
+        width: 100%;
+        height: 100vh;
+        background: var(--custompink);
+        z-index: 10;
+        padding-top: 1rem;
+      }
+      #menu ul {
+        position: relative;
+        margin-top: 3.125rem;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        gap: 0rem;
+        height: auto;
+      }
+      #menu ul li {
+        list-style: none;
+        color: white;
+        padding: 15px 40px;
+        font-size: 1.5rem;
+        font-weight: 600;
+        cursor: pointer;
+      }
+      .active#menu {
+        left: 0;
+      }
+      #menu.active::after {
+        font-size: 0rem;
+      }
+      .ul--Header{
+        display: flex;
+        align-items: flex-start;
+      }
+      .main-div--Header{
+        display: flex;
+        justify-content: start;
+        gap:2rem;
+      }
+    .first-div--HomePage{
+        display: flex;
+        flex-direction: column;
+        padding: 2rem 1rem;
+        gap:1rem;
+    }
+    .first-title--HomePage{
+        font-size: 2.5rem;
+    }
+    .card--HomePage{
+        display: flex;
+        flex-direction: column;
+        padding: 0rem 1rem;
+    }
+    .second-div--HomePage{
+        display: flex;
+        flex-direction: column;
+        padding: 4rem 1rem;
+    }
+    .second-title--HomePage{
+        line-height: normal;
+        text-align: center  ;
+    }
+    .main-div-tabs--HomePage .el-tabs .el-tabs__nav-wrap .el-tabs__nav-scroll{
+        padding-top: 0.3rem;
+    }
+    .main-div-tabs--HomePage .el-tabs .el-tabs__nav-prev{
+        left: 0.5rem;
+    }
+    .main-div-tabs--HomePage .el-tabs .el-tabs__nav-next{
+        right: 0.5rem;
+    }
+    .main-div--TabsItem{
+        display: flex;
+        flex-direction: column;
+        gap:5rem;
+    }
+    .second-div--TabsItem{
+        text-align: left;
+        align-items: flex-start;
+        justify-items: start;
+    }
+    .cost-btn--TabsItem{
+        align-items: flex-start;
+    }
+    .third-div--HomePage{
+        display: flex;
+        flex-direction: column;
+    }
+    .first-text--HomePage{
+       padding: 2rem 1rem;
+    }
+    .googleplaylogo--HomePage,
+    .appstorelogo--HomePage{
+        width: auto;
+        height: auto;
+    }
+    .third-title--HomePage{
+        padding: 0rem 1rem;
+        padding-top: 9rem;
+        font-size: 2.5rem;
+        line-height: normal;
+    }
+    .fourth-div--HomePage{
+        margin: 0rem;
+        padding-top: 6rem;
+    }
+    .fifth-div--HomePage{
+        margin: 0rem;
+        padding: 0rem 1rem;
+    }
+    .form--HomePage{
+        display: flex;
+        flex-direction: column;
+        gap:1rem;
+    }
+    .first-div--Footer{
+        display: flex;
+        flex-direction: column;
+        gap:2rem;
+        padding: 3.5rem 1rem;
+    }
+    .text--Footer{
+        justify-items: start;
+        align-items: flex-start;
+    }
+    .scroll-icon--HomePage {
+        position: fixed;
+        bottom: 1rem;
+        right: 1rem;
+        z-index: 100;
+        display: none;
+        cursor: pointer;
+      }
+ 
+}
+@media (min-width:401px) and (max-width:800px){
+    #header {
+        position: absolute;
+        top: 2.5rem;
+        right: 2rem;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 20;
+      }
+    
+        #header::before {
+          content: "";
+          position: absolute;
+          width: 1.563rem;
+          height: 0.2rem;
+          background: #fff;
+          transform: translateY(-0.625rem);
+          transition: transform 400ms cubic-bezier(0.23, 1, 0.32, 1);
+        }
+      
+        #header::after {
+          content: "";
+          position: absolute;
+          width: 1.563rem;
+          height: 0.2rem;
+          background: #fff;
+          box-shadow: 0 0.625rem 0 0;
+          color: #fff;
+          transition: 0.4s;
+        }
+    
+      .active#header::before {
+        transform: rotate(45deg);
+        transition: transform 400ms cubic-bezier(0.23, 1, 0.32, 1);
+      }
+    
+      .active#header::after {
+        transform: rotate(-45deg);
+        transition: transform 400ms cubic-bezier(0.23, 1, 0.32, 1);
+        box-shadow: none;
+      }
+    
+      #menu {
+        position: fixed;
+        top: 0;
+        left: 100%;
+        width: 100%;
+        height: 100vh;
+        background: var(--custompink);
+        z-index: 10;
+        padding-top: 1rem;
+      }
+      #menu ul {
+        position: relative;
+        margin-top: 3.125rem;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        gap: 0rem;
+        height: auto;
+      }
+      #menu ul li {
+        list-style: none;
+        color: white;
+        padding: 15px 40px;
+        font-size: 1.5rem;
+        font-weight: 600;
+        cursor: pointer;
+      }
+      .active#menu {
+        left: 0;
+      }
+      #menu.active::after {
+        font-size: 0rem;
+      }
+      .ul--Header{
+        display: flex;
+        align-items: flex-start;
+      }
+      .main-div--Header{
+        display: flex;
+        justify-content: center;
+      }
+      .btn-mar--Header{
+        margin-left: auto;
+        margin-right: auto;
+      }
+      .first-div--HomePage{
+        display: flex;
+        flex-direction: column;
+        padding: 2rem 1rem;
+        gap:1rem;
+    }
+    .first-title--HomePage{
+        font-size: 2.5rem;
+    }
+    .btn-cer--HomePage{
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .card--HomePage{
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap:1rem;
+        padding: 4rem 1rem;
+    }
+    .second-div--HomePage{
+        display: flex;
+        flex-direction: column;
+        padding: 4rem 1rem;
+    }
+    .main-div-tabs--HomePage .el-tabs .el-tabs__nav-wrap .el-tabs__nav-scroll{
+        padding-top: 0.2rem;
+    }
+    .main-div-tabs--HomePage .el-tabs .el-tabs__nav-prev{
+        left: 0.5rem;
+    }
+    .main-div-tabs--HomePage .el-tabs .el-tabs__nav-next{
+        right: 0.5rem;
+    }
+    .main-div--TabsItem{
+        display: flex;
+        flex-direction: column;
+        gap:5rem;
+    }
+    .second-div--TabsItem{
+        text-align: left;
+        align-items: flex-start;
+        justify-items: start;
+    }
+    .cost-btn--TabsItem{
+        align-items: flex-start;
+    }
+    .third-div--HomePage{
+        display: flex;
+        flex-direction: column;
+    }
+    .first-text--HomePage{
+       padding: 2rem 1rem;
+    }
+    .googleplaylogo--HomePage,
+    .appstorelogo--HomePage{
+        width: auto;
+        height: auto;
+    }
+    .third-title--HomePage{
+        padding: 0rem 1rem;
+        padding-top: 9rem;
+        font-size: 2.5rem;
+        line-height: normal;
+    }
+        .fourth-div--HomePage{
+        margin: 0rem;
+        padding-top: 6rem;
+    }
+    .fifth-div--HomePage{
+        margin: 0rem;
+        padding: 0rem 1rem;
+    }
+    .form--HomePage{
+        display: flex;
+        flex-direction: column;
+        gap:1rem;
+    }
+    .first-div--Footer{
+        display: flex;
+        flex-direction: column;
+        gap:2rem;
+        padding: 3.5rem 1rem;
+    }
+    .text--Footer{
+        justify-items: start;
+        align-items: flex-start;
+    }
+    .scroll-icon--HomePage {
+        position: fixed;
+        bottom: 3rem;
+        right: 2rem;
+        z-index: 100;
+        display: none;
+        cursor: pointer;
+      }
+}
+@media (min-width:801px) and (max-width:1023px){
+    .first-title--HomePage{
+        font-size: 3rem;
+    }
+    .main-div-tabs--HomePage .el-tabs .el-tabs__content{
+        padding: 1rem 0rem;
+    }
+    #Products,#Order{
+        margin: 0rem 1rem;
+    }
+   .googleplaylogo--HomePage,
+   .appstorelogo--HomePage{
+    width: auto;
+    height: auto;
+   }
+   .first-div--Footer{
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap:2rem;
+    padding: 3.5rem 1rem;
+   }
+   .text--Footer{
+    align-items: flex-start;
+   }
+   .custom-text--Footer{
+    align-items: center;
+   }
+   .scroll-icon--HomePage {
+    position: fixed;
+    bottom: 2rem;
+    right: 2.5rem;
+    z-index: 100;
+    display: none;
+    cursor: pointer;
+  }
+}
+@media (min-width:1024px) and (max-width:1536px){
+    .first-div--HomePage{
+        padding: 1rem;
+    }
+    .card--HomePage{
+        padding: 4rem 1rem;
+    }
+    .second-div--HomePage{
+        padding-left: 1rem;
+    }
+    .first-div--Footer{
+        padding: 3.5rem 1rem;
+    }
+    .scroll-icon--HomePage {
+        position: fixed;
+        bottom: 2rem;
+        right: 2.5rem;
+        z-index: 100;
+        display: none;
+        cursor: pointer;
+      }
+}

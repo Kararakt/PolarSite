@@ -1,0 +1,33 @@
+:root {
+  font-family: 'Hind Madurai', sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+
+  --custompink:#D23166;
+  --customblack:#150101;
+}
+
+body,
+html {
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+body::-webkit-scrollbar {
+  width: auto;               
+}
+body::-webkit-scrollbar-track {
+  background: #F2CEDA;        
+}
+body::-webkit-scrollbar-thumb {
+  background-color: var(--custompink); 
+  border-radius: 1.5rem; 
+  border: 2px solid #F2CEDA;  
+}
