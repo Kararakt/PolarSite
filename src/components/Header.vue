@@ -22,7 +22,7 @@ document.onclick = function (e: any) {
           class="flex items-center gap-6 text-[#150101] text-lg font-bold ul--Header"
         >
           <li class="cursor-pointer hover:text-[#D23166]">
-            <a href="#Home" class="TTTT">Home</a>
+            <a href="#Home">Home</a>
           </li>
           <li class="cursor-pointer hover:text-[#D23166]">
             <a href="#Products">Products</a>
