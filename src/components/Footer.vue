@@ -52,23 +52,21 @@ const ruleFormRef = ref<FormInstance>();
             <div class="flex gap-4">
               <a
                 class="cursor-pointer"
-                href="https://www.facebook.com/"
+                href="https://www.invisionapp.com/"
                 target="_blank"
-              >
-                <el-image src="/src/assets/facebooklogo.png"
+                ><el-image src="/src/assets/invisionlogo.png"
               /></a>
               <a
                 class="cursor-pointer"
-                href="https://twitter.com/"
+                href="https://www.invisionapp.com/"
                 target="_blank"
-                ><el-image src="/src/assets/twitterlogo.png"
+                ><el-image src="/src/assets/invisionlogo.png"
               /></a>
               <a
                 class="cursor-pointer"
-                href="https://www.instagram.com/"
+                href="https://www.invisionapp.com/"
                 target="_blank"
-              >
-                <el-image src="/src/assets/instagramlogo.png"
+                ><el-image src="/src/assets/invisionlogo.png"
               /></a>
               <a
                 class="cursor-pointer"
